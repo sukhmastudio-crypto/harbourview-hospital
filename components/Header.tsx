@@ -194,8 +194,8 @@ export default function Header() {
           <nav className="mx-auto max-w-7xl px-5 py-3" aria-label="Mobile navigation">
             {NAV.map((n) => {
               const active =
-                pathname === n.href ||
-                (n.href !== "/" && pathname.startsWith(`${n.href}/`));
+  pathname === n.href ||
+  (pathname !== "/" && pathname.startsWith(`${n.href}/`));
 
               return (
                 <Link
