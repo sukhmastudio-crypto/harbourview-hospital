@@ -2,37 +2,90 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Privacy policy",
-  description: "How Harbourview collects, uses and protects your personal and health information.",
+title: "Privacy Notice",
+description:
+"Demonstration privacy notice explaining how a medical clinic website may handle personal information.",
 };
 
 export default function PrivacyPage() {
-  return (
-    <>
-      <PageHero title="Privacy policy" sub="How Harbourview collects, uses and protects your personal information." />
-      {/* TEMPLATE: have a lawyer review this policy for the client before launch (Privacy Act 1988 and the Australian Privacy Principles). */}
-      <section className="mx-auto max-w-3xl px-5 py-14 prose-h">
-        <p>Harbourview Private Hospital (ABN 00 000 000 000) is bound by the Privacy Act 1988 (Cth) and the Australian Privacy Principles. This policy explains how we handle your personal information, including health information. Last updated: 1 January 2026.</p>
-        <h2>What we collect</h2>
-        <ul>
-          <li>Contact details, such as your name, phone, email and address.</li>
-          <li>Medicare, health fund and referral details.</li>
-          <li>Health information needed to treat you, such as your history, medications and test results.</li>
-          <li>Details you give us through this website, such as appointment requests and messages.</li>
-        </ul>
-        <h2>Why we collect it</h2>
-        <p>We collect information to provide care, arrange appointments, bill you and your health fund, meet our legal duties and improve our services. We only collect health information with your consent or where the law allows.</p>
-        <h2>Who we share it with</h2>
-        <p>We share information with your treating doctors, referrers, health funds, Medicare and government bodies where required. We do not sell your information. We do not send it overseas unless we tell you first.</p>
-        <h2>How we keep it safe</h2>
-        <p>Records are stored securely and only authorised staff can access them. Our systems are protected by access controls and regular security reviews.</p>
-        <h2>Website information</h2>
-        <p>Forms on this website send the details you enter to our team. This site stores your recent appointment requests and theme choice on your own device only.</p>
-        <h2>Access and correction</h2>
-        <p>You can ask to see or correct your information by contacting our Medical Records team on (02) 9000 0400.</p>
-        <h2>Complaints</h2>
-        <p>Contact our Privacy Officer at info@harbourview.example. If you are not satisfied, you can complain to the Office of the Australian Information Commissioner (oaic.gov.au).</p>
-      </section>
-    </>
-  );
+return (
+<>
+<PageHero
+title="Privacy notice"
+sub="Learn about privacy considerations for this medical clinic website concept."
+/>
+
+  <section className="mx-auto max-w-3xl px-5 py-14 prose-h">
+    <p className="muted text-sm">
+      DEMONSTRATION ONLY — Last updated: October 26, 2026.
+    </p>
+
+    <p>
+      Harbourview Medical Clinic is a fictional clinic used to demonstrate
+      a healthcare website design. This page is a sample notice, not a
+      statement of the privacy practices of an operating healthcare
+      provider. It has not been reviewed by a lawyer and should be
+      customized and legally reviewed before any real clinic launches this
+      website.
+    </p>
+
+    <h2>Information a real clinic website may collect</h2>
+    <p>
+      Depending on its features, a real website may collect information
+      such as your name, contact details, appointment preferences and
+      messages you submit. A healthcare provider may separately collect
+      health and insurance information when arranging or providing care.
+    </p>
+
+    <h2>How information may be used</h2>
+    <p>
+      A real clinic may use information to respond to enquiries, manage
+      appointments, coordinate care and meet applicable legal obligations.
+      The purposes and lawful basis for collection must be explained by
+      the actual provider.
+    </p>
+
+    <h2>Sharing and disclosure</h2>
+    <p>
+      Information-sharing practices depend on the provider, its service
+      providers and applicable law. A real clinic should explain when
+      information may be shared, with whom, and under what circumstances.
+    </p>
+
+    <h2>Security and retention</h2>
+    <p>
+      The actual provider must describe the safeguards it uses, how long
+      information is retained, and how information is securely disposed of.
+      This demonstration page does not verify or guarantee any security
+      controls or data-retention practices.
+    </p>
+
+    <h2>Website forms and device storage</h2>
+    <p>
+      Before launch, the clinic should verify what each website form
+      submits, where the information is sent, whether third-party services
+      receive it, and whether cookies or local device storage are used.
+      Do not submit real medical or personal information through a
+      demonstration website.
+    </p>
+
+    <h2>Your privacy rights</h2>
+    <p>
+      Privacy rights and complaint procedures depend on the applicable
+      laws and the actual organization operating the website. A real
+      clinic should provide a verified privacy contact and explain how
+      people can request access to or correction of their information.
+    </p>
+
+    <h2>Contact information</h2>
+    <p>
+      Harbourview Medical Clinic is a fictional demonstration brand.
+      Contact details for a real privacy officer have not been provided.
+      Replace this section with the operating clinic’s verified contact
+      information before launch.
+    </p>
+  </section>
+</>
+
+);
 }

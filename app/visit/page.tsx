@@ -11,18 +11,29 @@ export const metadata: Metadata = {
 };
 
 const STEPS = [
-  { t: "Referral and booking", d: "Bring your GP referral. We check your health fund cover and give you a written cost estimate before you commit." },
-  { t: "Pre-admission check", d: "A nurse reviews your medications and history by phone or in person, and answers questions about fasting and what to pack." },
-  { t: "Admission day", d: "Check in at the Level 1 concierge. Your named nurse meets you and stays your point of contact until discharge." },
-  { t: "Recovery at home", d: "A nurse rings you within 48 hours of discharge, and rehabilitation or home-visit services are booked before you leave." },
+  {
+    t: "Request an appointment",
+    d: "Contact our team to ask about available appointments and the services offered at the clinic.",
+  },
+  {
+    t: "Prepare for your visit",
+    d: "Bring your photo ID, current medication list, relevant medical records and insurance information, if applicable.",
+  },
+  {
+    t: "Meet your care team",
+    d: "Discuss your concerns, medical history and care options with your healthcare provider.",
+  },
+  {
+    t: "Follow-up care",
+    d: "Your provider will explain recommended next steps, prescriptions or follow-up appointments, as appropriate.",
+  },
 ];
 
 const HOURS = [
-  ["General wards", "10 am to 8 pm", "Up to four visitors at a time"],
-  ["Maternity", "Partners any time; visitors 2 pm to 8 pm", "Partners can stay overnight"],
-  ["Paediatrics", "Parents 24 hours; visitors 10 am to 7 pm", "One parent bed beside every child"],
-  ["Intensive care", "By arrangement", "Ask the nurse in charge"],
-  ["Emergency", "One or two support people", "Depends on how busy we are"],
+  ["Primary care", "By appointment", "Confirm availability with the clinic"],
+  ["Specialty services", "By appointment", "Availability varies by service"],
+  ["Appointment check-in", "Arrive a little early", "Bring your required documents"],
+  ["Family or support person", "Ask when booking", "Policies may vary by appointment"],
 ];
 
 export default function VisitPage() {
@@ -33,7 +44,9 @@ export default function VisitPage() {
       <section className="mx-auto max-w-7xl px-5 py-16 grid lg:grid-cols-12 gap-10 lg:gap-12">
         <div className="lg:col-span-5" data-rv>
           <h2 className="font-display text-3xl font-semibold">Your visit, step by step</h2>
-          <p className="muted mt-3 text-lg">Most planned admissions follow the same path. Your care coordinator walks you through each stage.</p>
+          <p className="muted mt-3 text-lg">
+  Every clinic visit is different. Our team can help you understand the appointment process and prepare for your visit.
+</p>
         </div>
         <ol className="lg:col-span-7 grid gap-4">
           {STEPS.map((s, i) => (
@@ -65,7 +78,9 @@ export default function VisitPage() {
         <div className="mx-auto max-w-7xl px-5 grid lg:grid-cols-3 gap-8 lg:gap-10">
           <div data-rv>
             <h2 className="font-display text-2xl font-semibold">Covered by major health funds</h2>
-            <p className="mt-3 text-sm" style={{ color: "var(--soft-on-navy)" }}>We have agreements with most Australian private health insurers, and accept DVA, workers compensation and CTP claims. Ask us for a no-obligation quote.</p>
+            <p className="mt-3 text-sm" style={{ color: "var(--soft-on-navy)" }}>
+  Insurance coverage and out-of-pocket costs depend on your plan and the services you receive. Contact your insurer and the clinic to confirm coverage, accepted plans and any expected costs before your appointment.
+</p>
           </div>
           <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-sm font-semibold">
             {FUNDS.map((f) => (<div key={f} className="rounded-xl py-5" style={{ background: "rgba(255,255,255,.08)" }} data-rv>{f}</div>))}

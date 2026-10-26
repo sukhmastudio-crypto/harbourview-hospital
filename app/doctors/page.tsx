@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Find a Doctor",
   description:
-    "Explore the doctors featured in the Harbourview Private Hospital demo directory in Sydney, Australia. Browse by name or specialty and view appointment options.",
+    "Explore illustrative doctor profiles at Harbourview Medical Clinic. Browse by name or specialty and view appointment options. All profiles are for demonstration purposes only.",
 };
 
 export default async function DoctorsPage({

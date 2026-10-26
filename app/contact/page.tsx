@@ -66,7 +66,7 @@ export default function ContactPage() {
                   Medical emergency?
                 </h2>
                 <p className="mt-2 text-sm leading-6">
-                  In Australia, call <strong>000</strong> for an emergency.
+                  For a life-threatening emergency in the United States, call <strong>911</strong>.
                   Do not use this website's forms to request urgent medical
                   assistance.
                 </p>
@@ -94,12 +94,12 @@ export default function ContactPage() {
 
               <div className="flex flex-col justify-between gap-1 border-b border-[rgba(15,42,58,0.08)] pb-3 sm:flex-row sm:gap-4">
                 <dt className="muted">Billing enquiries</dt>
-                <dd>(02) 9000 0300</dd>
+                
               </div>
 
               <div className="flex flex-col justify-between gap-1 border-b border-[rgba(15,42,58,0.08)] pb-3 sm:flex-row sm:gap-4">
                 <dt className="muted">Medical records</dt>
-                <dd>(02) 9000 0400</dd>
+                
               </div>
 
               <div className="flex flex-col justify-between gap-1 sm:flex-row sm:gap-4">

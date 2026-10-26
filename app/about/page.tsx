@@ -13,7 +13,7 @@ const TIMELINE = [
 ["1998", "A proposed expansion introduces a dedicated cardiac care service."],
 ["2006", "The concept grows to include maternity and family-focused care."],
 ["2014", "A specialist cancer care centre becomes part of the vision."],
-["2020", "A western Sydney campus is added to the demonstration timeline."],
+["2020", "A second clinic location is added to the fictional demonstration timeline."],
 ["2024", "A named-nurse approach highlights continuity and personal attention."],
 ];
 

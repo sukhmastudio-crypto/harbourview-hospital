@@ -6,42 +6,82 @@ import Footer from "@/components/Footer";
 import MotionObserver from "@/components/MotionObserver";
 import { CONFIG } from "@/lib/data";
 
-const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const body = Figtree({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const display = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
 
-const site = process.env.NEXT_PUBLIC_SITE_URL || "https://www.example.com.au";
+const body = Figtree({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+// Replace with the real deployed domain before launch.
+const site = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site),
-  title: { default: `${CONFIG.name} | Specialist care in Sydney`, template: `%s | ${CONFIG.name}` },
-  description: "Cardiac, cancer, maternity, orthopaedic and paediatric care in Sydney, with a named nurse for every patient. Book online.",
-  openGraph: { title: CONFIG.name, description: "Specialist care on the harbour. Book an appointment online.", type: "website", locale: "en_AU" },
+  title: {
+    default: `${CONFIG.name} | Personalized Medical Care`,
+    template: `%s | ${CONFIG.name}`,
+  },
+  description:
+    "Explore medical services, provider demo profiles and appointment request information in this private medical clinic website concept.",
+  openGraph: {
+    title: CONFIG.name,
+    description:
+      "A demonstration website concept for a modern private medical clinic.",
+    type: "website",
+    locale: "en_US",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
-// Runs before first paint: restores the saved theme and enables scroll animations.
+// Restore the saved theme and enable scroll animations when supported.
 const initScript = `(function(){try{var t=localStorage.getItem('hv_theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
 if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js')})()`;
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Hospital",
+  "@type": "WebSite",
   name: CONFIG.name,
-  telephone: CONFIG.phoneLink,
-  address: { "@type": "PostalAddress", streetAddress: "120 Harbour Street", addressLocality: "Sydney", addressRegion: "NSW", postalCode: "2000", addressCountry: "AU" },
-  openingHours: "Mo-Su 00:00-23:59",
+  description:
+    "Demonstration website concept for a private medical clinic. Not a real healthcare provider.",
+  inLanguage: "en-US",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en-AU" suppressHydrationWarning>
+    <html lang="en-US" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={`${display.variable} ${body.variable} font-sans antialiased`}>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-3 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black">Skip to content</a>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:m-3 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black"
+        >
+          Skip to content
+        </a>
         <Header />
         <main id="main">{children}</main>
         <Footer />

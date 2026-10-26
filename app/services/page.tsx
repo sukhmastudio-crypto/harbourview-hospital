@@ -8,7 +8,7 @@ import { DOCTORS, SERVICES } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Our Medical Services",
   description:
-    "Explore specialist medical services at Harbourview Private Hospital in Sydney, Australia. View care teams, service information and appointment options.",
+    "Explore medical services at Harbourview Medical Clinic, a demonstration website featuring care teams, service information and appointment options.",
 };
 
 export default function ServicesPage() {

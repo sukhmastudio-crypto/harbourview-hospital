@@ -45,9 +45,8 @@ export default function Header() {
           <p className="flex items-center gap-2">
             <span className="pulse dot" />
             <span>
-              Emergency Department open <strong>24/7</strong>. In a
-              life-threatening emergency, call 000.
-            </span>
+  Personalized care. Convenient appointments. A healthier you.
+</span>
           </p>
 
           <a
@@ -91,7 +90,7 @@ export default function Header() {
                 {CONFIG.short}
               </span>
               <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.19em] text-[#6B8583] sm:text-[10px]">
-                Private Hospital
+                PRIVATE MEDICAL CARE
               </span>
             </span>
           </Link>
@@ -144,7 +143,7 @@ export default function Header() {
               href="/book"
               className="hidden min-h-10 items-center justify-center gap-2 rounded-lg bg-[#103B40] px-4 text-[13px] font-semibold text-white shadow-sm transition duration-200 hover:bg-[#19534F] sm:inline-flex sm:px-5"
             >
-              <span>Book online</span>
+              <span>Request Appointment</span>
               <span aria-hidden="true">↗</span>
             </Link>
 

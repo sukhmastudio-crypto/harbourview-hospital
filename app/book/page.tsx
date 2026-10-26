@@ -75,7 +75,7 @@ initialDoctor={doctor}
         This form is not for emergencies
       </h2>
       <p className="mt-1 text-sm leading-5">
-        In Australia, call 000 for an emergency.
+        For a life threatening emergency in the United States, call 911.
       </p>
     </section>
   </aside>
