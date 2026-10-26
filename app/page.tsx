@@ -71,70 +71,120 @@ const CARE_POINTS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative isolate min-h-[440px] overflow-hidden bg-[#102e32] sm:min-h-[500px] lg:min-h-[540px]">
-        <div className="absolute inset-0 -z-20">
+      {/* CINEMATIC HERO WITH APPOINTMENT PANEL */}
+      <section className="relative isolate overflow-hidden bg-[#0b2029] text-white">
+        <div className="absolute inset-0 -z-20 lg:left-[32%]">
           <img
             src="/images/harbourview-hospital.png"
-            alt="Harbourview Medical Clinic — demonstration website"
-            className="h-full w-full object-cover object-[65%_center]"
+            alt="Modern hospital building"
+            className="h-full w-full object-cover object-[60%_center]"
           />
         </div>
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0b2529]/95 via-[#0b2529]/80 to-[#0b2529]/25" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0b2529]/45 via-transparent to-[#0b2529]/10" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0b2029] via-[#0b2029]/90 to-[#0b2029]/45" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0b2029]/65 to-transparent" />
 
-        <div className="mx-auto flex min-h-[440px] max-w-7xl items-center px-5 py-10 sm:min-h-[500px] sm:px-8 sm:py-12 lg:min-h-[540px] lg:py-14">
-          <div className="max-w-[650px] text-white">
-            <div className="mb-7 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#83d5c9]" />
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#b4e6df] sm:text-sm">
+        <div className="mx-auto grid min-h-[500px] max-w-[1500px] items-center gap-10 px-5 py-10 sm:px-8 lg:min-h-[510px] lg:grid-cols-12 lg:gap-8 lg:px-12">
+          {/* LEFT: HERO COPY */}
+          <div className="relative z-10 lg:col-span-7" data-rv>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-9 bg-[#75d2c5]" />
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#a6e2d9]">
                 Harbourview Medical Clinic
               </p>
             </div>
 
-            <h1 className="max-w-[620px] text-[2.7rem] font-medium leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-[4.5rem]">
-              Personalized care.
+            <h1 className="max-w-[620px] font-display text-[2.6rem] font-medium leading-[1.05] tracking-[-0.04em] sm:text-5xl xl:text-[4.1rem]">
+              Better care
               <br />
-              <span className="font-normal text-[#c2e5df]">
-                Built around
-                <br className="hidden sm:block" /> you.
-              </span>
+              begins with
+              <br />
+              <span className="text-[#8bd8ce]">being heard.</span>
             </h1>
 
-            <p className="mt-6 max-w-[490px] text-base leading-7 text-white/80 sm:mt-7 sm:text-lg sm:leading-8">
-              Explore healthcare services, learn about providers and request
-              an appointment with a clinic focused on your individual needs.
+            <p className="mt-5 max-w-[430px] text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+              Explore medical services, meet your care team and take the next
+              step towards care that considers your individual needs.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
                 href="/book"
-                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-[#d4eee8] px-6 py-3 text-sm font-semibold text-[#10383a] shadow-sm transition duration-200 hover:bg-white"
+                className="inline-flex min-h-12 items-center gap-3 rounded-sm bg-[#c9eee6] px-5 py-3 text-sm font-semibold text-[#102e37] transition hover:bg-white"
               >
-                Request an Appointment
-                <span aria-hidden="true">↗</span>
+                Request an Appointment <span aria-hidden="true">→</span>
               </Link>
 
               <Link
                 href="/services"
-                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-white/40 bg-white/[0.06] px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition duration-200 hover:border-white/70 hover:bg-white/10"
+                className="inline-flex items-center gap-2 border-b border-white/40 py-3 text-sm font-medium text-white/90 hover:border-[#8bd8ce] hover:text-[#8bd8ce]"
               >
-                Explore Our Care
-                <span aria-hidden="true">→</span>
+                Explore Services <span aria-hidden="true">↗</span>
               </Link>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/20 pt-5 text-sm text-white/75 sm:mt-12">
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#83d5c9]" />
-                Care tailored to your needs
-              </span>
-              <span className="hidden h-4 w-px bg-white/25 sm:block" />
-              <span>Clear guidance at every step</span>
+            <div className="mt-7 flex flex-wrap gap-x-7 gap-y-2 border-t border-white/15 pt-5 text-xs text-white/70 sm:text-sm">
+              <span>Personal attention</span>
+              <span className="text-[#75d2c5]">✳</span>
+              <span>Clear guidance</span>
+            </div>
+          </div>
+
+          {/* RIGHT: COMPACT APPOINTMENT PANEL */}
+          <div className="relative z-10 lg:col-span-5" data-rv>
+            <div className="ml-auto max-w-[410px] rounded-2xl border border-white/20 bg-[#102832]/90 p-5 shadow-2xl backdrop-blur-xl sm:p-6">
+              <div className="mb-5 flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8bd8ce]">
+                    Start here
+                  </p>
+                  <h2 className="mt-2 font-display text-2xl font-semibold sm:text-3xl">
+                    Request a visit
+                  </h2>
+                  <p className="mt-2 text-xs leading-5 text-white/65">
+                    Tell us what kind of appointment you need.
+                  </p>
+                </div>
+
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#8bd8ce]/30 bg-[#8bd8ce]/10 text-xl text-[#8bd8ce]">
+                  +
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] p-3">
+                  <p className="text-[10px] uppercase tracking-wider text-white/50">
+                    Step 01
+                  </p>
+                  <p className="mt-1 text-sm font-medium">Choose a service</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] p-3">
+                  <p className="text-[10px] uppercase tracking-wider text-white/50">
+                    Step 02
+                  </p>
+                  <p className="mt-1 text-sm font-medium">Send your request</p>
+                </div>
+              </div>
+
+              <Link
+                href="/book"
+                className="mt-4 flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-[#c9eee6] px-4 py-3 text-sm font-bold text-[#102e37] transition hover:bg-white"
+              >
+                Continue to Appointment Form
+                <span aria-hidden="true">→</span>
+              </Link>
+
+              <p className="mt-3 text-center text-[10px] leading-5 text-white/50">
+                Appointment requests are subject to clinic confirmation.
+              </p>
             </div>
           </div>
         </div>
+
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-[#8bd8ce]/50 to-transparent"
+        />
       </section>
 
       {/* QUICK LINKS */}
